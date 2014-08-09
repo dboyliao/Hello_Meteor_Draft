@@ -3,12 +3,35 @@ head
 
 body
 	+main
+	hr
 	+second
+	hr
+	+post
+	hr
 
 template(name="main")
-	h2 Hello Meteor
+	h2 {{helloMeteor}}
+	a(href="{{meteorUrl}}") Meteor URL
 	h2 Meteor is easy to learn!
 	div by Dboy
 
 template(name="second")
 	h2 This is the second template
+
+template(name="post")
+	hr
+	h2 {{helloObject.author}}:
+	h2 {{helloObject.text}}:
+	hr
+
+	if showHelloArray
+		each helloArray
+			hr
+			h2 {{text}}
+			hr
+	else
+		h2 showHelloArray is false
+	hr
+	h2 {{hellofunction "Dboy"}}
+	h2 {{hellofunction helloObject.text}}
+
