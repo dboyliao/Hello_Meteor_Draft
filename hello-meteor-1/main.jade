@@ -1,5 +1,14 @@
 head
-    title Hello Meteor - Dboy
+	title Hello Meteor - Dboy
 
 body
-    h2 Hello Meteor
+	+main
+	+second
+
+template(name="main")
+	h2 Hello Meteor
+	h2 Meteor is easy to learn!
+	div by Dboy
+
+template(name="second")
+	h2 This is the second template
